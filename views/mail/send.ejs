@@ -29,7 +29,7 @@
 						console.log($('#mailContent').val());
 						$.ajax({
 							type:'post',
-							url:"/mails/mailsend",
+							url:"/mails/send",
 							data:{
 								'title':$('#mailname').val(),
 								'address':$('#receiver').val(),

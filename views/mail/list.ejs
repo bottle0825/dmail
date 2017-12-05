@@ -39,9 +39,8 @@
 			$(function(){
 				var arr = [];
 				$.ajax({
-					type:'post',
-					url:"/mails/maillist",
-					data:'maillist',
+					type:'get',
+					url:"/mails",
 					async:false,
 					error:function(){
 						alert('服务器访问错误！');
@@ -61,7 +60,7 @@
 							trTamp.on('click',function(){
 								var str = JSON.stringify(mail);
 								window.sessionStorage.setItem('mail',str);
-								location.href = '/mails/mailcon';
+								location.href = '/mail/' + mail.id;
 							});
 							trTamp.appendTo($('tbody'));
 						});

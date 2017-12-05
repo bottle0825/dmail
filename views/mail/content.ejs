@@ -22,7 +22,7 @@
 				<span>邮件内容：</span>
 				<p id="mainContent"></p>
 			</div>
-			<a href="/mails/maillist">返回邮件列表</a>
+			<a href="/mail">返回邮件列表</a>
 		</div>
 		<script src="/javascripts/jquery.js"></script>
 		<script>
@@ -37,7 +37,7 @@
 					$('#mainContent').html(data.content);
 					$.ajax({
 						type:'post',
-						url:'/mails/mailcon',
+						url:'/mails/' + data.id,
 						'data':data,
 						async:false,
 						error:function(){
