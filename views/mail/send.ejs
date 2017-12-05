@@ -21,12 +21,11 @@
 				<textarea id="mailContent" rows="5" cols=""></textarea><br />
 				<input type="button" name="send" id="send" value="发送邮件" />
 			</form>
-			<script src="/javascripts/jquery.js"></script>
+			<script src="http://code.jquery.com/jquery-latest.js"></script>
 			<script>
 				$(function(){
 					$('#send').on('click',function(){
 						var date = new Date().toLocaleString();
-						console.log($('#mailContent').val());
 						$.ajax({
 							type:'post',
 							url:"/mails/send",
